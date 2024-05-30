@@ -2,18 +2,18 @@
 
 namespace Database\Seeders;
 
-use App\Models\Review;
+use App\Models\Genre;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ReviewSeeder extends Seeder
+class GenreSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-       Review::create([
+        Review::create([
             'name' => 'Shounen',
             'user' => '@Raisa_Aqila',
             'rate' => '8,5/10',
@@ -38,9 +38,5 @@ class ReviewSeeder extends Seeder
             'rate' => '9/10',
             'Date' => '10 Mei 2019'
             ]);
-
-
-       
-
     }
 }

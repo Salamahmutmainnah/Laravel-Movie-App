@@ -2,16 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Genre;
+use App\Models\Review;
 use Illuminate\Http\Request;
 
-class GenreController extends Controller
+class ReviewController extends Controller
 {
     public function index()
     {
-        $genre = new Genre;
-        $genres = $genre->getAllGenres();
+        $reviews = Review::all();
 
-        return view('genres.index', ['genres' => $genres]);
+        return view('reviews.index', compact('reviews'));
     }
-}
+ }

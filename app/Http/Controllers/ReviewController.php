@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Review;
+use App\Models\Movie;
 use Illuminate\Http\Request;
 
 class ReviewController extends Controller
@@ -23,8 +24,7 @@ class ReviewController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'title' => 'required',
-            'movie_title' => 'required',
+            'movie_id' => 'required',
             'user' => 'required',
             'rate' => 'required',
             'date' => 'required',

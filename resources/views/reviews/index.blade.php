@@ -87,7 +87,7 @@
                                 </div>
                             </div>
                             <p class="text-sm font-medium text-black dark:text-white">
-                                {{ $review->movie->title }}
+                                {{ $review->movie_id }}
                             </p>    
                         </div>
                     </div>

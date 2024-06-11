@@ -54,54 +54,35 @@
                 <div class="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
                     <div class="border-b border-stroke px-6.5 py-4 dark:border-strokedark">
                         <h3 class="font-medium text-black dark:text-white">
-                            Review Form
+                            Genre Form
                         </h3>
                     </div>
-                    <form action="/reviews" method="POST">
+                    <form action="/genres/{{ $genre->id }}" method="POST">
                         @csrf
+                        @method('PUT')
                         <div class="p-6.5">
                             <div class="mb-4.5">
-                                <label class="mb-3 block text-sm font-medium text-black dark:text-white"> Movie Title <span class="text-meta-1">*</span> </label>
+                                <label class="mb-3 block text-sm font-medium text-black dark:text-white"> Name <span class="text-meta-1">*</span> </label>
                                 <input
-                                    id="movie_id"
-                                    name="movie_id"
+                                    id="name"
+                                    name="name"
+                                    value="{{$genre->name}}"
                                     type="text"
-                                    placeholder="Enter anime title"
+                                    placeholder="Enter anime name"
                                     class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                                 />
                             </div>
 
-                            <div class="mb-4.5">
-                                <label class="mb-3 block text-sm font-medium text-black dark:text-white"> User <span class="text-meta-1">*</span> </label>
-                                <input
-                                    id="user"
-                                    name="user"
-                                    type="text"
-                                    placeholder="Enter user"
-                                    class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                                />
-                            </div>
 
-                            <div class="mb-4.5">
-                                <label class="mb-3 block text-sm font-medium text-black dark:text-white"> Rating <span class="text-meta-1">*</span> </label>
-                                <input
-                                    id="rate"
-                                    name="rate"
-                                    type="text"
-                                    placeholder="Enter rate "
+                            <div class="mb-6">
+                                <label class="mb-3 block text-sm font-medium text-black dark:text-white"> Description <span class="text-meta-1">*</span> </label>
+                                <textarea
+                                    id="description"
+                                    name="description"
+                                    rows="6"
+                                    placeholder="Type anime description"
                                     class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                                />
-                            </div>
-
-                            <div class="mb-4.5">
-                                <label class="mb-3 block text-sm font-medium text-black dark:text-white"> Date <span class="text-meta-1">*</span> </label>
-                                <input
-                                    id="date"
-                                    name="date"
-                                    type="text"
-                                    placeholder="Enter date"
-                                    class="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 font-normal text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
-                                />
+                                >{{$genre->description}}</textarea>
                             </div>
 
                             <button type="submit" class="flex w-full justify-center rounded bg-primary p-3 font-medium text-gray hover:bg-opacity-90">

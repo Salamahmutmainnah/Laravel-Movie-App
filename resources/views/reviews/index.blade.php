@@ -59,7 +59,7 @@
                         <p class="font-medium">id</p>
                     </div>
                     <div class="col-span-2 flex items-center">
-                        <p class="font-medium">Movie Title</p>
+                        <p class="font-medium">Title</p>
                     </div>
                     <div class="col-span-2 items-center sm:flex">
                         <p class="font-medium">User</p>

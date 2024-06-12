@@ -94,7 +94,7 @@
                 <a class="flex items-center gap-4" href="#" @click.prevent="dropdownOpen = ! dropdownOpen">
                     <span class="hidden text-right lg:block">
                         <span class="block text-sm font-medium text-black">{{ Auth::user()->name}}</span>
-                        <span class="block text-xs font-medium"> <Your Role> </span>
+                        <span class="block text-xs font-medium"> <admin> </span>
                     </span>
 
                     <span class="h-12 w-12 rounded-full">
